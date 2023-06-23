@@ -81,31 +81,26 @@
                 document.getElementById('whoWon').innerHTML = 'Player wins!';
                 playerWinCount++
                 document.getElementById('wins').innerHTML = 'Wins: ' + playerWinCount;
-
             } else if (player === 'Paper' && response === 'Rock') {
                 console.log('Player wins!');
                 document.getElementById('whoWon').innerHTML = 'Player wins!';
                 playerWinCount++
                 document.getElementById('wins').innerHTML = 'Wins: ' + playerWinCount;
-
             } else if (player === 'Paper' && response === 'Scissors') {
                 console.log('Computer wins!');
                 document.getElementById('whoWon').innerHTML = 'Computer wins!';
                 computerWinCount++
                 document.getElementById('loses').innerHTML = 'Loses: ' + computerWinCount;
-
             } else if (player === 'Scissors' && response === 'Rock') {
                 console.log('Computer wins!');
                 document.getElementById('whoWon').innerHTML = 'Computer wins!';
                 computerWinCount++
                 document.getElementById('loses').innerHTML = 'Loses: ' + computerWinCount;
-
             } else if (player === 'Scissors' && response === 'Paper') {
                 console.log('Player wins!');
                 document.getElementById('whoWon').innerHTML = 'Player wins!';
                 playerWinCount++
                 document.getElementById('wins').innerHTML = 'Wins: ' + playerWinCount;
-        
             } else {
                 console.log("This shouldn't happen...");
             }
@@ -134,6 +129,7 @@
             </div>
             <footer>
                 <p id="player">...</p>
+                <br>
                 <img src="https://i.imgur.com/LsAW815.png" width="160" height="210" id="responseImg"/>
                 <p id="response">...</p>
                 <br>
