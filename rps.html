@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+let playerWinCount = 0;
+let computerWinCount = 0;
+let player = '';
+function choseRock() {
+    player = 'Rock'
+}
+function chosePaper() {
+    player = 'Paper'
+}
+function choseScissors() {
+    player = 'Scissors'
+}
+function theAll() {
+
+    let response = '';
+
+    if (player === 'Rock' || player === 'Paper' || player === 'Scissors') {
+        console.log('Player: ' + player);
+        generateResponse();
+        document.getElementById("player").innerHTML = 'Player chose: ' + player;
+    } else {
+        console.log('Please type Rock, Paper or Scissors.')
+        document.getElementById("text").innerHTML = 'Please choose Rock, Paper or Scissors.';
+
+}
+
+    function generateResponse() {
+        let randomNum = Math.floor(Math.random() * 3);
+        switch (randomNum) {
+            case 0:
+             response = 'Rock';
+             break;
+            case 1:
+             response = 'Paper';
+            break;
+            case 2:
+             response = 'Scissors';
+             break;
+            default:
+             break;
+  }
+}
+    if(response === 'Rock') {
+        document.getElementById("responseImg").src="https://i.imgur.com/p83NPUw.png";
+        document.getElementById("responseImg").height="256";
+        document.getElementById("responseImg").width="256";
+    } else if(response === 'Paper') {
+        document.getElementById("responseImg").src="https://i.imgur.com/c6MFeDd.png";
+        document.getElementById("responseImg").height="256";
+        document.getElementById("responseImg").width="256";
+    } else if(response === 'Scissors') {
+        document.getElementById("responseImg").src="https://i.imgur.com/h4sgk3c.png";
+        document.getElementById("responseImg").height="256";
+        document.getElementById("responseImg").width="256";
+    } else {
+        document.getElementById("responseImg").src="https://i.imgur.com/LsAW815.png";
+        document.getElementById("responseImg").height="210";
+        document.getElementById("responseImg").width="160";
+    }
+    document.getElementById("response").innerHTML = 'Computer chose: ' + response;
+
+    console.log('Computer: ' + response);
+
+    if (player === response) {
+        document.getElementById('whoWon').innerHTML = 'Tie!';
+
+    } else if (player === 'Rock' && response === 'Paper') {
+        console.log('Computer wins!');
+        document.getElementById('whoWon').innerHTML = 'Computer wins!';
+        computerWinCount++
+        document.getElementById('loses').innerHTML = 'Loses: ' + computerWinCount;
+
+
+    } else if (player === 'Rock' && response === 'Scissors') {
+        console.log('Player wins!');
+        document.getElementById('whoWon').innerHTML = 'Player wins!';
+        playerWinCount++
+        document.getElementById('wins').innerHTML = 'Wins: ' + playerWinCount;
+
+    } else if (player === 'Paper' && response === 'Rock') {
+        console.log('Player wins!');
+        document.getElementById('whoWon').innerHTML = 'Player wins!';
+        playerWinCount++
+        document.getElementById('wins').innerHTML = 'Wins: ' + playerWinCount;
+
+    } else if (player === 'Paper' && response === 'Scissors') {
+        console.log('Computer wins!');
+        document.getElementById('whoWon').innerHTML = 'Computer wins!';
+        computerWinCount++
+        document.getElementById('loses').innerHTML = 'Loses: ' + computerWinCount;
+
+    } else if (player === 'Scissors' && response === 'Rock') {
+        console.log('Computer wins!');
+        document.getElementById('whoWon').innerHTML = 'Computer wins!';
+        computerWinCount++
+        document.getElementById('loses').innerHTML = 'Loses: ' + computerWinCount;
+
+    } else if (player === 'Scissors' && response === 'Paper') {
+        console.log('Player wins!');
+        document.getElementById('whoWon').innerHTML = 'Player wins!';
+        playerWinCount++
+        document.getElementById('wins').innerHTML = 'Wins: ' + playerWinCount;
+        
+    } else {
+        console.log("This shouldn't happen...");
+}
+
+}
+        </script>
+    </head>
+    <body>
+        <header>
+            <title>Rock, Paper, Scissors</title>
+        </header>
+        <main>
+            <h1>Welcome to Rock, Paper, Scissors!</h1>
+            <section>
+                <p>
+                    Click Rock, Paper or Scissors and the computer will choose randomly. Then the game will tell you who won. Good luck!
+                </p>
+                <label id="winAt25">Reset scores when either reach 25</label>
+                <input type="checkbox" id="winAt25">
+                <br>
+            </section>
+            <div>
+                <br>
+                <button onclick="choseRock(); theAll()"><img src="https://i.imgur.com/p83NPUw.png" width="256" height="256"/></button>
+                <button onclick="chosePaper(); theAll()"><img src="https://i.imgur.com/c6MFeDd.png" width="256" height="256"/></button>
+                <button onclick="choseScissors(); theAll()"><img src="https://i.imgur.com/h4sgk3c.png" width="256" height="256"/></button>
+            </div>
+            <footer>
+                <p id="player">...</p>
+                <img src="https://i.imgur.com/LsAW815.png" width="160" height="210" id="responseImg"/>
+                <p id="response">...</p>
+                <br>
+                <h3 id="whoWon">...</h3>
+                <br>
+                <br>
+                <p id="wins">Wins: 0</p>
+                <p id="loses">Loses: 0</p>
+            </footer>
+        </main>
+    </body>
+</html>
