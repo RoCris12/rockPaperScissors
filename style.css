@@ -10,9 +10,11 @@
     margin: 0 auto;
 }
 
-.welcome {
-    position: relative;
-    top: 50px;
+.main {
     text-align: center;
+    border: 4px;
+}
+
+.welcome {
     font-family: Arial;
 }
