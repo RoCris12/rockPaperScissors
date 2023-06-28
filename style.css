@@ -1,8 +1,10 @@
 .title {
+    color: white;
     background-color: gray;
     display: block;
     font-family: Garamond;
     text-align: left;
+    width: 100%;
 }
 
 .welcome {
