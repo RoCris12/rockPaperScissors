@@ -5,14 +5,16 @@
     font-family: Arial;
     text-align: left;
     width: 100%;
-    padding: 10px 20px;
-    font-size: 90px;
-    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 65px;
+    margin: 0 0;
 }
 
 .main {
     text-align: center;
     border: 4px;
+    border-color: black;
+    margin-top: 40px;
 }
 
 .welcome {
