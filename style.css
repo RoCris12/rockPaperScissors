@@ -5,7 +5,9 @@
     font-family: Arial;
     text-align: left;
     width: 100%;
-    font-size: 100px;
+    padding: 10px 20px;
+    font-size: 90px;
+    margin: 0 auto;
 }
 
 .welcome {
