@@ -1,12 +1,10 @@
 .title {
     color: white;
     background-color: gray;
-    display: block;
     font-family: Arial;
     text-align: left;
-    padding: 0 20px;
+    padding: 10px
     font-size: 65px;
-    margin: 0 auto;
 }
 
 .main {
