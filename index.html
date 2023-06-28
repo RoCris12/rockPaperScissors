@@ -112,9 +112,10 @@
             <title>Rock, Paper, Scissors</title>
         </header>
         <main>
-            <h1>Welcome to Rock, Paper, Scissors!</h1>
+            <h1 class="title">Rock, Paper, Scissors</h1>
+            <h1 class="welcome">Welcome to Rock, Paper, Scissors!</h1>
             <section>
-                <p>
+                <p class="description">
                     Click Rock, Paper or Scissors and the computer will choose randomly. Then the game will tell you who won. Good luck!
                 </p>
                 <label id="winAt25">Reset scores when either reach 25</label>
@@ -122,21 +123,21 @@
             </section>
             <div>
                 <br>
-                <button onclick="choseRock(); theAll()"><img src="https://i.imgur.com/p83NPUw.png" width="256" height="256"/></button>
-                <button onclick="chosePaper(); theAll()"><img src="https://i.imgur.com/c6MFeDd.png" width="256" height="256"/></button>
-                <button onclick="choseScissors(); theAll()"><img src="https://i.imgur.com/h4sgk3c.png" width="256" height="256"/></button>
+                <button onclick="choseRock(); theAll()"><img src="./rock.png" width="256" height="256"/></button>
+                <button onclick="chosePaper(); theAll()"><img src="./paper.png" width="256" height="256"/></button>
+                <button onclick="choseScissors(); theAll()"><img src="./scissors.png" width="256" height="256"/></button>
             </div>
             <footer>
                 <p id="player">...</p>
                 <br>
-                <img src="https://i.imgur.com/LsAW815.png" width="160" height="210" id="responseImg"/>
+                <img src="./question.png" width="160" height="210" id="responseImg"/>
                 <p id="response">...</p>
                 <br>
                 <h3 id="whoWon">...</h3>
                 <br>
                 <br>
-                <p id="wins">Wins: 0</p>
-                <p id="loses">Loses: 0</p>
+                <p id="wins" class="stats">Wins: 0</p>
+                <p id="loses" class="stats">Loses: 0</p>
             </footer>
         </main>
     </body>
